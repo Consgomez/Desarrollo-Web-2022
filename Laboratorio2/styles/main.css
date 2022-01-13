@@ -1,0 +1,52 @@
+*{
+    margin: 1rem !important;
+    font-family: 'Nunito', sans-serif;
+    background-color: #FAF6F1;
+}
+
+div{
+    margin: 0 !important;
+}
+
+header{
+    display: flex;
+    padding-top: 0.5rem;
+    align-items: center;
+    border-bottom: 2px solid #E63946;
+}
+
+h1{
+    font-size: 3em;
+    color: #47A8BD;
+}
+
+header img{
+    width: 250px;
+    height: auto;
+}
+
+main{
+    display: flex;
+}
+
+h2, h3{
+    color: #2C423F;
+}
+
+.principal{
+    flex: 0 0 65%;
+}
+
+.side{
+    border-left: 2px solid #E63946;
+    padding-left: 1rem;
+}
+
+#experiencia{
+    padding-bottom: 1rem;
+}
+
+.info{
+    padding-bottom: 0.5rem;
+}
+

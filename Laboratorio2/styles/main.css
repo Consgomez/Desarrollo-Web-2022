@@ -4,20 +4,25 @@
     background-color: #FAF6F1;
 }
 
-div{
+div {
     margin: 0 !important;
 }
 
 header{
     display: flex;
     padding-top: 0.5rem;
+    padding-bottom: 1rem;
     align-items: center;
-    border-bottom: 2px solid #E63946;
+    border-bottom: solid #E63946;
 }
 
 h1{
     font-size: 3em;
     color: #47A8BD;
+}
+
+p{
+    font-weight: 300;
 }
 
 header img{
@@ -27,6 +32,8 @@ header img{
 
 main{
     display: flex;
+    border-bottom: 2px solid #E63946;
+    padding-bottom: 1rem;
 }
 
 h2, h3{
@@ -50,3 +57,35 @@ h2, h3{
     padding-bottom: 0.5rem;
 }
 
+#skills p, span{
+    margin-bottom: 0 !important;
+}
+
+#skills span{
+    margin-top: 0.5rem !important;
+}
+
+.color-dot{
+    width: 20px;
+    height: 20px;
+    background-color: #47A8BD;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot{
+    width: 20px;
+    height: 20px;
+    background-color: #A18276;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer h4{
+    margin-left: 0 !important;
+}

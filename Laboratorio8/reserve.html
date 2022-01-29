@@ -60,7 +60,7 @@
                 <label for="reserve-unique-id">Unique ID</label>
                 <input type="text" class="form-control" id="reserve-unique-id">
               </div>
-              <button type="submit" class="btn btn-primary submit">Submit</button>
+              <button type="submit" class="btn btn-primary submit" id="add-btn">Submit</button>
             </form>
           </div>
         </div>
@@ -84,6 +84,34 @@
 
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
+  $("#add-btn").on("click", (e) => {
+    e.preventDefault();
+
+    var newTable = {
+      name: $("#reserve-name").val().trim(),
+      phoneNumber : $("#reserve-phone").val().trim(),
+      email: $("#reserve-email").val().trim(),
+      id: $("#reserve-unique-id").val().trim(),
+    }
+
+    $.get("/api/tables", (data) => {
+      if (data.length<5)
+      {
+        $.post("/api/tables", newTable)
+          .then((data) => {
+            console.log(data)
+            alert("Adding table...")
+          })
+      } else {
+        $.post("api/waitList", newTable)
+          .then((data) => {
+            console.log(data)
+            alert("You're waitlisted...")
+          })
+      }
+    })
+
+  })
 
 
 </script>
